@@ -1,0 +1,26 @@
+#include<iostream>
+using namespace std;
+
+int main() {
+
+    int array[5], i, j;
+    int slar, temp;
+
+    cout << "Enter numbers:";
+    for (i = 0; i < 5; i++) {
+        cin >> array[i];
+    }
+
+    for (i = 0; i < 5; i++) {
+        for (j = i + 1; j < 5; j++) {
+            if (array[i] > array[j]) {
+                temp = array[i];
+                array[i] = array[j];
+                array[j] = temp;
+            }
+        }
+    }
+    cout << "Second largest:" << array[5 - 2];
+
+    return 0;
+}
